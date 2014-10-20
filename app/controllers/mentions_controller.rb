@@ -11,11 +11,11 @@ class MentionsController < ApplicationController
 	end
 
 	def new
-		@mention = Mention.new
+		@mention = current_user.mentions.build
 	end
 
 	def create
-		@mention = Mention.new(mention_params)
+		@mention = current_user.mentions.build(mention_params)
 
 		if @mention.save
 			redirect_to @mention, notice: "Successfully created new Mention"
