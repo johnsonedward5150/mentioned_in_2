@@ -1,0 +1,6 @@
+%h1= @mention.title
+%p= @mention.description
+
+= link_to "Back", root_path
+= link_to "Edit", edit_mention_path
+= link_to "Delete", mention_path, method: :delete, data: { confirm:"Are you sure?"}
