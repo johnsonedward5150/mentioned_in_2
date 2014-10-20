@@ -43,7 +43,7 @@ class MentionsController < ApplicationController
 	private
 
 	def mention_params
-		params.require(:mention).permit(:title, :description)
+		params.require(:mention).permit(:title, :description, :image)
 	end
 
 	def find_mention
