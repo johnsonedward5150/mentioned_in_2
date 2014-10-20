@@ -1,5 +1,6 @@
 class MentionsController < ApplicationController
 	before_action :find_mention, only: [:show, :edit, :update, :destroy, :upvote]
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		@mention = Mention.all.order("created_at DESC")
