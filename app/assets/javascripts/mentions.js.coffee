@@ -5,6 +5,6 @@
 $ ->
 	$('#mentions').imagesLoaded ->
 		$('#mentions').masonry
-			layoutMode: 'fitRows'
 			itemSelector: '.box'
 			isFitWidth: true
+			columnWidth:10

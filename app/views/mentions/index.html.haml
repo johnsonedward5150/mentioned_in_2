@@ -1,4 +1,5 @@
 #mentions.transitions-enabled
 	- @mention.each do |mention|
 		<!--.box.panel.panel-default-->
-
+		.box
+			= link_to (image_tag mention.image.url), mention
