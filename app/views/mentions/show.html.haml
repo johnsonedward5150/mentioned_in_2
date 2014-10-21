@@ -6,14 +6,12 @@
 			.panel-body
 				%h1= @mention.title
 				%p= @mention.description
-				%p 
-				Submited by 
-				= @mention.user.email
+				
 			.panel-footer
 				.row
 					.col-md-6
 						%p.user
-						Submitted by
+						This mention is about
 						= @mention.user.email
 					.col-md-6
 						.btn-group.pull-right

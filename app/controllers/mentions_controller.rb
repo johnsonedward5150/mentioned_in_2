@@ -3,8 +3,12 @@ class MentionsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		@mention = Mention.all.order("created_at DESC")
-		#this is what tells the homepage to show the mentions in decreasing order
+		if signed_in?
+			@mention = current_user.mentions("created at DESC")
+		else
+			@mention = Mention.all.order("created_at DESC")
+			#this is what tells the homepage to show the mentions in decreasing order
+		end
 	end
 
 	def show

@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   end
 
   root "mentions#index"
+
+  	get '/mentions/mymentions' => 'mentions#mymentions' # or match for older Rails versions
+	resources :mentions
 end
