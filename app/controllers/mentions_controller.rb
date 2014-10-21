@@ -4,7 +4,7 @@ class MentionsController < ApplicationController
 
 	def index
 		if signed_in?
-			@mention = current_user.mentions("created at DESC")
+			@mention = current_user.mentions.order("created_at DESC")
 		else
 			@mention = Mention.all.order("created_at DESC")
 			#this is what tells the homepage to show the mentions in decreasing order

@@ -52,6 +52,12 @@ nav {
 	  img {
 	  	max-height: 100%;
 	  	width: auto;
+	  	-webkit-filter: grayscale(1) opacity(0.5);
+	  }
+	  img:hover {
+	  	max-height: 100%;
+	  	width: auto;
+	  	-webkit-filter: grayscale(0) opacity(1);
 	  }
 	  h2 {
 	  	font-size: 22px;
@@ -116,3 +122,5 @@ nav {
 textarea {
 	min-height: 250px;
 }
+
+/*.grayscale {-webkit-filter: grayscale(100%) opacity(50%);}*/
