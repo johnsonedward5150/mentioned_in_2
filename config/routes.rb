@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'profiles/show'
+
   devise_for :users
+  
   resources :mentions do
   	member do
   		put "like", to: "mentions#upvote"
@@ -8,6 +11,6 @@ Rails.application.routes.draw do
 
   root "mentions#index"
 
-  	get '/mentions/mymentions' => 'mentions#mymentions' # or match for older Rails versions
-	resources :mentions
+  get '/:id', to: 'profiles#show'
+
 end

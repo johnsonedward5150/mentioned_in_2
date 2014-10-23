@@ -11,6 +11,10 @@ class MentionsController < ApplicationController
 		end
 	end
 
+	def mymention
+
+	end
+
 	def show
 
 	end
@@ -59,5 +63,9 @@ class MentionsController < ApplicationController
 
 	def find_mention
 		@mention = Mention.find(params[:id])
+	end
+
+	def user_mention
+		@mention = current_user.mentions.order("created_at DESC")
 	end
 end
