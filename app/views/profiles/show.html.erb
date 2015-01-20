@@ -1,1 +1,11 @@
+<div class="page-header">
 <h1><%= @user.profile_name %></h1>
+</div>
+
+<% if @mentions %>
+	<% @mentions.each do |mentions| %>
+		<div class="well">
+			<%= mention.content %>
+		</div>
+	<% end %>
+<% end %>

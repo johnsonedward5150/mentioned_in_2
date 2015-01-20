@@ -11,6 +11,10 @@ class MentionsController < ApplicationController
 		end
 	end
 
+	def mymention
+
+	end
+
 	def show
 
 	end

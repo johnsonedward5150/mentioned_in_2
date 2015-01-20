@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   root "mentions#index"
 
-  get '/:id', to: 'profiles#show'
+  get '/:id', to: 'profiles#show', as: 'profile'
 
 end
